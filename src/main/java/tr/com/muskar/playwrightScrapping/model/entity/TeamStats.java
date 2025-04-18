@@ -23,9 +23,7 @@ public class TeamStats {
     private Integer goalConceded;
     private Double xg;
     private Double xGC;
-//    private Double plusMinus;
     private Integer points;
-
     public TeamStats(List<ElementHandle> cells,String leagueName){
         this.leagueName = leagueName;
         this.teamName = cells.get(1).innerText().trim();
