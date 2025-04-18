@@ -57,13 +57,6 @@ public class LeagueDetailService {
              teamStats.setXg(Double.parseDouble(cells.get(3).innerText().trim()) );
              teamStats.setXGC(Double.parseDouble(cells.get(4).innerText().trim()));
          }
-//            String position = cells.get(0).innerText().trim();
-//            String team = cells.get(1).innerText().trim();
-//            String matchesPlayed = cells.get(2).innerText().trim();
-//            String xG = cells.get(3).innerText().trim();
-//            String xGC = cells.get(4).innerText().trim();
-//            String plusMinus = cells.get(5).innerText().trim();
-//            String points = cells.get(6).innerText().trim();
 
         }
        List<TeamStats> teamStatsList =  teamStatsMap.values().stream().toList();

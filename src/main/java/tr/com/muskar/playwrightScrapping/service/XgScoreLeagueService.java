@@ -32,11 +32,11 @@ public class XgScoreLeagueService {
                     String matchTime = (timeElement != null) ? timeElement.innerText().trim() : "Unknown";
 
                     List<ElementHandle> teams = fixture.querySelectorAll("span.xgs-fixture_team");
-                    String team1 = teams.size() > 0 ? teams.get(0).innerText().trim() : "Unknown";
+                    String team1 = !teams.isEmpty() ? teams.get(0).innerText().trim() : "Unknown";
                     String team2 = teams.size() > 1 ? teams.get(1).innerText().trim() : "Unknown";
 
                     List<ElementHandle> predictions = fixture.querySelectorAll("mark.xgs-mark strong");
-                    String team1_xg = predictions.size() > 0 ? predictions.get(0).innerText().trim() : "N/A";
+                    String team1_xg = !predictions.isEmpty() ? predictions.get(0).innerText().trim() : "N/A";
                     String team2_xg = predictions.size() > 1 ? predictions.get(1).innerText().trim() : "N/A";
 
                     ElementHandle oddElement = fixture.querySelector("span.xgs-public-forecast-fixture_odd mark.xgs-mark strong");
