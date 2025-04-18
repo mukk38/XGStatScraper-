@@ -30,7 +30,7 @@ public class ScheduledTask {
         xgScoreLeagueService.checkActiveMatches(webPageUrl);
     }
 
-    @Scheduled(initialDelay = 0, fixedRate = 30, timeUnit = TimeUnit.MINUTES)
+    @Scheduled(initialDelay = 1, fixedRate = 30, timeUnit = TimeUnit.MINUTES)
     public void pullLeagueStatistics() {
         leagueDetailService.pullLeagueDetailService(englandPremierLeagueWebPage, "Premier League");
         leagueDetailService.pullLeagueDetailService(laLigaWebPage, "La Liga");
