@@ -52,7 +52,7 @@ public class XgScoreLeagueService {
                     activeMatches.put(link,newMatchDto);
 
                 } catch (Exception e) {
-                    System.out.println("Hata oluştu: " + e.getMessage());
+                    System.out.println("Error Occured: " + e.getMessage());
                 }
             }
             browser.close();
