@@ -13,6 +13,8 @@ import java.util.*;
 @RequiredArgsConstructor
 public class LeagueDetailService {
 
+    private final double TIMEOUT_SCRAP=2000;
+
     private final TeamStatsRepository teamStatsRepository;
 
     public void pullLeagueDetailService(String url,String leagueName){
@@ -24,7 +26,7 @@ public class LeagueDetailService {
             updateMainInfoAboutTeam(page,leagueName,teamStatsMap);
             Locator xGButton = page.locator("button.mat-button-toggle-button:has-text('xG')");
             xGButton.click();
-            page.waitForTimeout(2000);
+            page.waitForTimeout(TIMEOUT_SCRAP);
             updateDetailInfoAboutTeam(page,teamStatsMap);
 
             browser.close();
