@@ -49,10 +49,11 @@ public class XgScoreLeagueService {
                     newMatchDto.setTeam2Xg(Double.parseDouble(team2_xg));
                     newMatchDto.setOdd(odd);
                     newMatchDto.setTime(LocalTime.parse(matchTime));
-                    activeMatches.put(link,newMatchDto);
+                    activeMatches.put(link, newMatchDto);
 
                 } catch (Exception e) {
                     System.out.println("Error Occured: " + e.getMessage());
+                    e.printStackTrace();
                 }
             }
             browser.close();
